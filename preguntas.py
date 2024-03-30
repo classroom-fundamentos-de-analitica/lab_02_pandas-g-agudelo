@@ -230,6 +230,6 @@ def pregunta_13():
     Name: _c5b, dtype: int64
     """
     tbl0["_c5"]=tbl2[["_c0","_c5b"]].groupby("_c0").sum()
-    return tbl0[["_c1","_c5"]].groupby("_c1").sum().squeeze(
+    return tbl0[["_c1","_c5"]].groupby("_c1").sum().squeeze()
 
 
