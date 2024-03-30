@@ -172,8 +172,7 @@ def pregunta_10():
     """
     
     tbl0['_c2'] = tbl0['_c2'].astype("string")
-    return  tbl0.sort_values(by=['_c1', '_c2']).groupby("_c1")["_c2"].apply(":".join)
-
+    return  (tbl0.sort_values(by=['_c1', '_c2']).groupby("_c1")["_c2"].apply(":".join).reset_index()).set_index("_c1")
 
 
 
